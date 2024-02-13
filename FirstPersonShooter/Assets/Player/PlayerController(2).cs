@@ -7,7 +7,7 @@ using TMPro;
 public class PlayerController : MonoBehaviour
 {
     //Debug
-    public TMP_Text debug_text;
+   // public TMP_Text debug_text;
 
     //Camera Variables
     public Camera cam;
@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     [Range(0.01f,1f)]public float sensitivity;
 
     //Player Input
-    private Vector2 move_input;
+    /*private Vector2 move_input;
     private bool grounded;
 
     //Movement Variables
@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
     public float friction = 4;
 
     // Start is called before the first frame update
-    void Start()
+    */void Start()
     {
         //Hide the mouse.
         Cursor.lockState = CursorLockMode.Locked;
@@ -47,22 +47,22 @@ public class PlayerController : MonoBehaviour
         if (invert_y) invert_factor_y = -1;
 
         //Get Components
-        character_controller = GetComponent<CharacterController>();
+        //character_controller = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
     void Update()
     {
         //Debug
-        debug_text.text = "Wish Dir: " + wish_dir.ToString();
+        /*debug_text.text = "Wish Dir: " + wish_dir.ToString();
         debug_text.text += "\nPlayer Velocity: " + player_velocity.ToString();
         debug_text.text += "\nPlayey Speed: " + new Vector3(player_velocity.x, 0, player_velocity.z).magnitude.ToString();
-        debug_text.text += "\nGrounded: " + grounded.ToString();
+        debug_text.text += "\nGrounded: " + grounded.ToString();*/
         
         Look();
     }
 
-    private void FixedUpdate()
+   /* private void FixedUpdate()
     {
         //Find wish dir
         wish_dir = transform.right * move_input.x + transform.forward * move_input.y;
@@ -87,14 +87,14 @@ public class PlayerController : MonoBehaviour
 
         //Move the player.
         character_controller.Move(player_velocity * Time.deltaTime);
-    }
+    }*/
 
     public void GetLookInput(InputAction.CallbackContext context)
     {
         look_input = context.ReadValue<Vector2>();
     }
 
-    public void GetMoveInput(InputAction.CallbackContext context)
+   /* public void GetMoveInput(InputAction.CallbackContext context)
     {
         move_input = context.ReadValue<Vector2>();
     }
@@ -102,7 +102,7 @@ public class PlayerController : MonoBehaviour
     public void GetJumpInput(InputAction.CallbackContext context)
     {
         Jump();
-    }
+    }*/
 
     private void Look()
     {
@@ -116,7 +116,7 @@ public class PlayerController : MonoBehaviour
         cam.transform.localRotation = Quaternion.Euler(horizontal_look_angle, 0, 0);
     }
 
-    private void Jump()
+    /*private void Jump()
     {
         if(grounded)
         {
@@ -159,5 +159,5 @@ public class PlayerController : MonoBehaviour
     private Vector3 MoveAir(Vector3 wish_dir, Vector3 current_velocity)
     {
         return Accelerate(wish_dir, current_velocity, acceleration, max_speed);
-    }
+    }*/
 }
