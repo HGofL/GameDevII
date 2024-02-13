@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 459230337}
   - component: {fileID: 459230336}
   - component: {fileID: 459230335}
+  - component: {fileID: 459230339}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -154,17 +155,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0749cdb919dc47408f9c20d3993305a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debug_text: {fileID: 1963341113}
   cam: {fileID: 963194227}
   invert_x: 0
   invert_y: 0
   sensitivity: 0
-  max_speed: 6
-  acceleration: 60
-  gravity: 20
-  stop_speed: 0.5
-  jump_impulse: 10
-  friction: 4
 --- !u!114 &459230336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,6 +279,18 @@ Transform:
   - {fileID: 533448321}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &459230339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459230334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4f91ee648c9f8446b1a9ff13e3c5c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &533448320
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,7 +575,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 820598675}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2.45, y: 0.5, z: 2.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1006,14 +1012,14 @@ MonoBehaviour:
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4284032294
-  m_fontColor: {r: 0.14955682, g: 0.14324494, b: 0.3490566, a: 1}
+    rgba: 4290518405
+  m_fontColor: {r: 0.5231791, g: 0.114542544, b: 0.735849, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1087,7 +1093,7 @@ SceneRoots:
   - {fileID: 963194228}
   - {fileID: 705507995}
   - {fileID: 1672838534}
-  - {fileID: 820598679}
   - {fileID: 1682571023}
+  - {fileID: 820598679}
   - {fileID: 1641438002}
   - {fileID: 459230338}
