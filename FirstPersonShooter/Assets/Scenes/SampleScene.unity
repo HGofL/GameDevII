@@ -202,8 +202,8 @@ MonoBehaviour:
     m_ActionName: Player/Look
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 459230335}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+      - m_Target: {fileID: 459230339}
+        m_TargetAssemblyTypeName: PlayerStateMachine, Assembly-CSharp
         m_MethodName: GetMoveInput
         m_Mode: 0
         m_Arguments:
@@ -218,9 +218,9 @@ MonoBehaviour:
     m_ActionName: Player/New action
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 459230335}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: GetJumpInput
+      - m_Target: {fileID: 459230339}
+        m_TargetAssemblyTypeName: PlayerStateMachine, Assembly-CSharp
+        m_MethodName: GetMoveInput
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -291,6 +291,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4f91ee648c9f8446b1a9ff13e3c5c14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debug_text: {fileID: 0}
+  character_controller: {fileID: 0}
+  player_velocity: {x: 0, y: 0, z: 0}
+  wish_dir: {x: 0, y: 0, z: 0}
 --- !u!1 &533448320
 GameObject:
   m_ObjectHideFlags: 0

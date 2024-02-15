@@ -55,8 +55,8 @@ public class PlayerController : MonoBehaviour
     {
         //Debug
         /*debug_text.text = "Wish Dir: " + wish_dir.ToString();
-        debug_text.text += "\nPlayer Velocity: " + player_velocity.ToString();
-        debug_text.text += "\nPlayey Speed: " + new Vector3(player_velocity.x, 0, player_velocity.z).magnitude.ToString();
+        debug_text.text += "\nVelocity: " + player_velocity.ToString();
+        debug_text.text += "\nSpeed: " + new Vector3(player_velocity.x, 0, player_velocity.z).magnitude.ToString();
         debug_text.text += "\nGrounded: " + grounded.ToString();*/
         
         Look();
