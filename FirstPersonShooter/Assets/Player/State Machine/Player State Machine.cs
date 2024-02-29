@@ -62,7 +62,7 @@ public class PlayerStateMachine : MonoBehaviour
 
     public void GetJumpInput(InputAction.CallbackContext context)
     {
-        if(context.phase == InputActionPhase.Started) jump_button_pressed = true);
+        if(context.phase == InputActionPhase.Started) jump_button_pressed = true;
     }
 
     public void Debug_Text()

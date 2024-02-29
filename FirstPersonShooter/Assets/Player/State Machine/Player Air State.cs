@@ -13,13 +13,17 @@ public class PlayerAirState : PlayerBaseState
 
     public override void EnterState(PlayerStateMachine state_machine)
     {
-       
+
     }
     public override void ExitState(PlayerStateMachine state_machine)
     {
         state_machine.player_velocity.y = -2;
     }
     public override void UpdateState(PlayerStateMachine state_machine)
+    {
+
+    }
+    public override void FixedUpdateState(PlayerStateMachine state_machine)
     {
         //gravity
         state_machine.player_velocity.y -= gravity * Time.deltaTime;

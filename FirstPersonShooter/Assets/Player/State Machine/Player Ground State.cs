@@ -8,8 +8,9 @@ public class PlayerGroundState :PlayerBaseState
     public float max_speed = 6;
     public float acceleration = 60;
     public float stop_speed = 0.5f;
-   // public float jump_impulse = 10f;
+    public float jump_impulse = 10f;
     public float friction = 4;
+    
 
     public override void EnterState(PlayerStateMachine state_machine)
     {
@@ -29,7 +30,7 @@ public class PlayerGroundState :PlayerBaseState
         state_machine.player_velocity = MoveGround(state_machine.wish_dir, state_machine.player_velocity);
 
         //switch states
-        if (state_machine.character_controller.isGrounded) ;
+        if (state_machine.character_controller.isGrounded)
         {
             state_machine.SwitchState(this, state_machine.air_state);
         }
