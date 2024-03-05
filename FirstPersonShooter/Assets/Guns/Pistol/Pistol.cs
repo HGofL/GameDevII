@@ -40,8 +40,9 @@ public class Pistol : Gun
         }
     }
 
-    protected override void SecondaryFire()
+    private void Update()
     {
-
+        //subtract from shoot timer
+        if (shoot_delay_timer > 0) shoot_delay_timer -= Time.deltaTime;
     }
 }
